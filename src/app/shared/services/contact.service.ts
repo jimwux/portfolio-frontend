@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ContactFormPayload } from '../models/contact.model';
-import { environment } from '../../../enviroments/enviroment';
+import { environment } from '../../../environments/enviroment';
 
 @Injectable({
   providedIn: 'root'
