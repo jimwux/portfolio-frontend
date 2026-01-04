@@ -1,1 +1,189 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --bg-main: #fbf5e9;
+  --bg-soft: #fffaf0;
+  --primary: #d97706;
+  --primary-dark: #b45309;
+  --text: #5a3e2b;
+  --muted: #7c6f64;
+  --border: rgba(90, 62, 43, 0.12);
+  --shadow: rgba(217, 119, 6, 0.25);
+  --shadow-dark: rgba(114, 59, 23, 0.10);
+  --font-sans: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text);
+  font-family: var(--font-sans);
+}
+
+a {
+  color: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 30px;
+}
+
+@media (max-width: 991px) {
+  section {
+    scroll-margin-top: 70px;
+  }
+}
+
+
+.section {
+  padding: 96px 0;
+}
+
+.section-soft {
+  background: var(--bg-soft);
+}
+
+.section-main {
+  background: var(--bg-main);
+}
+
+.section-title {
+  font-size: 2.1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: var(--text);
+  font-family: var(--font-serif);
+}
+
+.section-subtitle {
+  color: var(--muted);
+  max-width: 720px;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 991px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 48px 0;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .container {
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .section {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+.card-soft {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.badge-soft {
+  background: rgba(217, 119, 6, 0.12);
+  color: var(--primary);
+  border: 1px solid rgba(217, 119, 6, 0.18);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-weight: 500;
+}
+
+.btn-primary-soft {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover {
+    background: var(--primary-dark);
+    color: #fff;
+  }
+}
+
+.btn-outline-soft {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover {
+    background: var(--primary);
+    color: #fff;
+  }
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+
+.chip {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(217, 119, 6, 0.25);
+  background: rgba(255, 250, 240, 0.75);
+  color: #6f3b1b;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.title-underline {
+  width: 92px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--primary);
+  margin: 0.75rem auto 0;
+}
+
+.date {
+  background: rgba(217, 119, 6, 0.10);
+  border: 1px solid rgba(217, 119, 6, 0.18);
+  color: var(--primary-dark);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  white-space: nowrap;
+}

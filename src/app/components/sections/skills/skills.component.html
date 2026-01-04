@@ -1,0 +1,30 @@
+<section id="skills" class="section section-soft">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <h2 class="section-title mb-2">Habilidades técnicas</h2>
+      <p class="section-subtitle mx-auto">
+        Tecnologías con las que trabajé en proyectos académicos y personales.
+      </p>
+    </div>
+
+    <div class="skills-unified">
+
+      @for (category of skillCategories; track category.title) {
+        <article class="skills-block">
+          <header class="skills-block-header">
+            <i [class]="category.icon"></i>
+            <h3>{{ category.title }}</h3>
+          </header>
+
+          <div class="chips">
+            @for (skill of category.skills; track skill) {
+              <span class="chip">{{ skill }}</span>
+            }
+          </div>
+        </article>
+      }
+
+    </div>
+  </div>
+</section>

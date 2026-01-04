@@ -1,0 +1,132 @@
+.footer {
+  background: var(--bg-main);
+  padding: 64px 0;
+  border-top: 1px solid var(--border);
+}
+
+.logo-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.footer-brand {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+  font-family: var(--font-serif);
+}
+
+.footer-description {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.footer-heading {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1.2rem;
+  font-family: var(--font-serif);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 0.75rem;
+  }
+
+  a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: white;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+
+  &:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px var(--shadow);
+  }
+}
+
+.footer-divider {
+  margin: 48px 0 24px;
+  border: none;
+  border-top: 1px solid var(--border);
+  opacity: 1;
+}
+
+.footer-bottom {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .footer {
+    padding: 48px 0 24px;
+  }
+
+  .footer-heading {
+    margin-top: 1.5rem;
+  }
+
+  .social-links {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer-brand {
+    font-size: 1rem;
+  }
+
+  .footer-description {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,141 @@
+.timeline {
+  position: relative;
+  margin-top: 56px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(217, 119, 6, 0.25);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 44px;
+  background: transparent;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 9px;
+  top: 28px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 10px 22px rgba(90, 62, 43, 0.14);
+}
+
+.experience-card {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 26px;
+  box-shadow: var(--shadow);
+  background: #fff;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.experience-role {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.experience-company {
+  margin: 6px 0 0;
+  color: var(--muted);
+
+  span {
+    color: var(--primary);
+    font-weight: 600;
+  }
+}
+
+.experience-subtitle {
+  margin: 18px 0 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.experience-list {
+  padding-left: 18px;
+  margin: 0 0 10px;
+
+  li {
+    margin-bottom: 8px;
+    line-height: 1.7;
+    color: var(--text);
+  }
+}
+
+/* Responsive: timeline más compacta */
+@media (max-width: 767px) {
+  .timeline::before {
+    left: 12px;
+  }
+
+  .timeline-item {
+    padding-left: 44px;
+    margin-bottom: 32px;
+  }
+
+  .timeline-dot {
+    left: 4px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .experience-card {
+    padding: 20px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .experience-role {
+    font-size: 1.1rem;
+  }
+
+  .date {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .timeline-item {
+    padding-left: 36px;
+  }
+
+  .experience-card {
+    padding: 16px;
+  }
+
+  .chips {
+    gap: 8px;
+  }
+
+  .chip {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+}

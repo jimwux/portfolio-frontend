@@ -1,0 +1,80 @@
+.skills-unified {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* In very wide screens show 4 columns to fit the extra card comfortably */
+@media (min-width: 1200px) {
+  .skills-unified {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 991px) {
+  .skills-unified {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .skills-unified {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.skills-block {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 26px;
+  box-shadow: var(--shadow);
+  transition: transform 260ms cubic-bezier(.2,.9,.3,1), box-shadow 260ms ease, border-color 260ms ease;
+  will-change: transform;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .skills-block:hover {
+    transform: translateY(-10px) scale(1.01);
+    box-shadow: 0 5px 60px var(--shadow-dark);
+    border-color: rgba(217, 119, 6, 0.18);
+  }
+
+  .skills-block:hover .skills-block-header i {
+    transform: translateY(-2px);
+    color: var(--primary);
+    transition: transform 200ms ease, color 200ms ease;
+  }
+}
+
+@media (max-width: 575px) {
+  .skills-block {
+    padding: 20px;
+  }
+
+  .skills-block-header h3 {
+    font-size: 1rem;
+  }
+}
+
+.skills-block-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  color: var(--text);
+
+  i {
+    font-size: 1.2rem;
+    color: var(--primary);
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+  }
+}
+

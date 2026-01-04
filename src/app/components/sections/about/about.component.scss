@@ -1,0 +1,117 @@
+/* Card principal */
+.about-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 26px;
+  box-shadow: var(--shadow);
+  display: flex;
+}
+
+/* Texto */
+.about-text {
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+/* Acciones */
+.about-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+/* Highlights */
+.about-highlights {
+  display: grid;
+  gap: 12px;
+}
+
+.highlight {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(217, 119, 6, 0.18);
+  background: rgba(255, 250, 240, 0.70);
+}
+
+.highlight-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(217, 119, 6, 0.14);
+  border: 1px solid rgba(217, 119, 6, 0.18);
+  color: var(--primary);
+  flex: 0 0 auto;
+}
+
+.highlight-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.highlight-text {
+  margin: 2px 0 0;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Layout */
+.about-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-content {
+  flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-card {
+    padding: 20px;
+  }
+
+  .highlight {
+    padding: 12px;
+  }
+
+  .highlight-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .about-actions {
+    flex-direction: column;
+  }
+
+  .about-actions .btn-outline-soft {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}

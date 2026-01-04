@@ -1,0 +1,41 @@
+<section id="education" class="section section-main">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title font-serif mb-2">Educación</h2>
+      <p class="section-subtitle mx-auto">
+        Mi recorrido académico y formación complementaria.
+      </p>
+    </div>
+
+    <div class="edu-list">
+      @for (e of education; track e.title; let i = $index) {
+        <article class="edu-card" [class.reverse]="i % 2 === 1">
+
+          <div class="edu-content">
+            <div class="edu-head">
+              <div>
+                <h3 class="edu-title">{{ e.title }}</h3>
+                <p class="edu-inst mb-0">{{ e.institution }}</p>
+              </div>
+
+              <span class="edu-date">
+                <i class="fa-regular fa-calendar me-2"></i>{{ e.date }}
+              </span>
+            </div>
+
+            <p class="edu-desc">{{ e.description }}</p>
+
+            <div class="edu-tags">
+              <span class="badge-soft" *ngFor="let t of e.tags">{{ t }}</span>
+            </div>
+          </div>
+
+          <div class="edu-media">
+            <img class="edu-img" [src]="e.image" [alt]="e.imageAlt" />
+          </div>
+
+        </article>
+      }
+    </div>
+  </div>
+</section>

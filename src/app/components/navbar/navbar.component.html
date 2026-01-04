@@ -1,0 +1,39 @@
+<nav class="custom-nav fixed-top" [class.scrolled]="scrolled">
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <a href="#home" class="d-flex align-items-center gap-3 text-decoration-none">
+      <div class="logo-circle">
+        <i class="fa-solid fa-code"></i>
+      </div>
+      <span class="brand-text">Jimena Gomez Wusinowski</span>
+    </a>
+
+    <!-- Desktop menu -->
+    <div class="nav-menu d-none d-lg-flex align-items-center gap-4">
+      <a class="nav-link-custom" href="#about" (click)="closeMenu()">Sobre mí</a>
+      <a class="nav-link-custom" href="#experience" (click)="closeMenu()">Experiencia</a>
+      <a class="nav-link-custom" href="#skills" (click)="closeMenu()">Habilidades</a>
+      <a class="nav-link-custom" href="#education" (click)="closeMenu()">Educación</a>
+      <a class="btn-primary-soft" href="#contact" (click)="closeMenu()">Contacto</a>
+    </div>
+
+    <!-- Hamburger button -->
+    <button class="hamburger d-lg-none" [class.active]="menuOpen" (click)="toggleMenu()" aria-label="Menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu d-lg-none" [class.active]="menuOpen">
+    <div class="mobile-menu-content">
+      <a class="mobile-link" href="#about" (click)="closeMenu()">Sobre mí</a>
+      <a class="mobile-link" href="#experience" (click)="closeMenu()">Experiencia</a>
+      <a class="mobile-link" href="#skills" (click)="closeMenu()">Habilidades</a>
+      <a class="mobile-link" href="#education" (click)="closeMenu()">Educación</a>
+      <a class="btn-primary-soft" href="#contact" (click)="closeMenu()">Contacto</a>
+    </div>
+  </div>
+</nav>

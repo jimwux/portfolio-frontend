@@ -1,0 +1,94 @@
+<section id="contact" class="section section-soft contact-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title font-serif mb-2">Contactame</h2>
+      <div class="title-underline"></div>
+      <p class="section-subtitle mx-auto mt-3">
+        Si tenés una idea, proyecto o simplemente querés saludar, escribime y te respondo.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-left">
+        <div class="info-list">
+          <a
+            class="info-card"
+            *ngFor="let c of cards"
+            [href]="c.href"
+            [attr.target]="c.targetBlank ? '_blank' : null"
+            [attr.rel]="c.targetBlank ? 'noopener noreferrer' : null"
+          >
+            <div class="info-icon">
+              <i [class]="c.icon"></i>
+            </div>
+
+            <div class="info-body">
+              <h3 class="info-title">{{ c.title }}</h3>
+              <p class="info-value">{{ c.value }}</p>
+              @if (c.helper) {
+                <p class="info-helper">{{ c.helper }}</p>
+              }
+            </div>
+
+            @if (c.type === 'social') {
+              <i class="fa-solid fa-arrow-right info-arrow"></i>
+            }
+          </a>
+        </div>
+
+        <div class="contact-map card-soft">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52438.89273548268!2d-58.66960677832031!3d-34.65255829999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc65a9d3ff9a5%3A0x5b9e1b3b0f3f3f3f!2sCastelar%2C%20Provincia%20de%20Buenos%20Aires%2C%20Argentina!5e0!3m2!1ses!2sar!4v1640000000000!5m2!1ses!2sar"
+            width="100%"
+            height="300"
+            style="border:0; border-radius: 12px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="map-badge">
+            <i class="fa-solid fa-location-dot me-2"></i>
+            Castelar, Argentina
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form card-soft" [formGroup]="form" (ngSubmit)="submit()">
+        <div class="form-head">
+          <h3 class="form-title">Enviar mensaje</h3>
+          <p class="form-subtitle">Te respondo lo antes posible.</p>
+        </div>
+
+        <div class="field">
+          <label for="name">Tu nombre</label>
+          <input id="name" type="text" formControlName="name" placeholder="Tu nombre" />
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" formControlName="email" placeholder="tu@email.com" />
+        </div>
+
+        <div class="field">
+          <label for="message">Mensaje</label>
+          <textarea
+            id="message"
+            rows="5"
+            formControlName="message"
+            placeholder="Contame sobre tu idea..."
+          ></textarea>
+        </div>
+
+        <button class="btn-primary-soft btn-send" type="submit" [disabled]="sending">
+          @if (!sending) {
+            <span>Enviar</span>
+          }
+          @if (sending) {
+            <span>Enviando…</span>
+          }
+          <i class="fa-solid fa-paper-plane ms-2"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

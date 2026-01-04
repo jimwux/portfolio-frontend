@@ -1,0 +1,22 @@
+<div class="toast-container">
+  @for (toast of toasts$ | async; track toast.id) {
+    <div class="toast" [class]="'toast-' + toast.type">
+      @if (toast.type === 'success') {
+        <i class="fa-solid fa-circle-check me-2"></i>
+      }
+      @if (toast.type === 'error') {
+        <i class="fa-solid fa-triangle-exclamation me-2"></i>
+      }
+      @if (toast.type === 'warning') {
+        <i class="fa-solid fa-exclamation-triangle me-2"></i>
+      }
+      @if (toast.type === 'info') {
+        <i class="fa-solid fa-circle-info me-2"></i>
+      }
+      <span>{{ toast.message }}</span>
+      <button class="toast-close" (click)="remove(toast.id)">
+        <i class="fa-solid fa-times"></i>
+      </button>
+    </div>
+  }
+</div>

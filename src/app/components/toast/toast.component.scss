@@ -1,0 +1,88 @@
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 420px;
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  padding: 14px 18px;
+  border-radius: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.3s ease;
+
+  &-success {
+    background: rgba(100, 156, 54, 0.95);
+    border: 1px solid rgba(77, 119, 42, 0.95);
+    color: #fff;
+  }
+
+  &-error {
+    background: rgba(192, 77, 49, 0.95);
+    border: 1px solid rgba(151, 62, 40, 0.95);
+    color: #fff;
+  }
+
+  &-warning {
+    background: rgba(240, 179, 65, 0.95);
+    border: 1px solid rgba(207, 154, 54, 0.95);
+    color: #78350f;
+  }
+
+  &-info {
+    background: rgba(71, 126, 226, 0.95);
+    border: 1px solid rgba(61, 112, 207, 0.95);
+    color: #fff;
+  }
+
+  span {
+    flex: 1;
+  }
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .toast-container {
+    bottom: 12px;
+    right: 12px;
+    left: 12px;
+    max-width: none;
+  }
+}

@@ -1,0 +1,55 @@
+<section id="about" class="section section-soft">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title font-serif mb-2">Sobre mí</h2>
+      <div class="title-underline"></div>
+    </div>
+
+    <div class="about-card">
+      <div class="about-layout">
+        <div class="about-left">
+          <div class="about-content">
+                <p class="about-text">
+                  Soy desarrolladora web fullstack con experiencia en la creación de soluciones web completas.
+                  Mi enfoque está en desarrollar aplicaciones utilizando arquitecturas modernas basadas en APIs,
+                  trabajando tanto en el frontend como en el backend.
+                </p>
+
+                <p class="about-text">
+                  Actualmente me encuentro trabajando en NetOne, donde participo en el desarrollo de diferentes
+                  productos empresariales. Me apasiona crear experiencias de usuario intuitivas mientras mantengo
+                  código limpio y de alta calidad.
+                </p>
+          </div>
+
+          <div class="about-actions">
+            @for (l of aboutLinks; track l.href) {
+              <a class="btn-outline-soft" [href]="l.href" target="_blank" rel="noopener">
+                <i [class]="l.iconClass + ' me-2'"></i>
+                {{ l.label }}
+              </a>
+            }
+          </div>
+        </div>
+
+
+        <div class="about-right">
+          <div class="about-highlights">
+            @for (h of aboutHighlights; track h.title) {
+              <div class="highlight">
+                <div class="highlight-icon">
+                  <i [class]="h.iconClass"></i>
+                </div>
+                <div>
+                  <p class="highlight-title">{{ h.title }}</p>
+                  <p class="highlight-text">{{ h.text }}</p>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
