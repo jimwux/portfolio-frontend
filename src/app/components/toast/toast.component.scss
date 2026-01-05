@@ -22,26 +22,26 @@
   animation: slideIn 0.3s ease;
 
   &-success {
-    background: rgba(100, 156, 54, 0.95);
-    border: 1px solid rgba(77, 119, 42, 0.95);
+    background: rgba(132, 160, 109, 0.95);
+    border: 1px solid rgba(106, 148, 72, 0.95);
     color: #fff;
   }
 
   &-error {
-    background: rgba(192, 77, 49, 0.95);
-    border: 1px solid rgba(151, 62, 40, 0.95);
+    background: rgba(190, 96, 73, 0.95);
+    border: 1px solid rgba(153, 76, 57, 0.95);
     color: #fff;
   }
 
   &-warning {
-    background: rgba(240, 179, 65, 0.95);
-    border: 1px solid rgba(207, 154, 54, 0.95);
+    background: rgba(219, 179, 105, 0.95);
+    border: 1px solid rgba(185, 149, 81, 0.95);
     color: #78350f;
   }
 
   &-info {
-    background: rgba(71, 126, 226, 0.95);
-    border: 1px solid rgba(61, 112, 207, 0.95);
+    background: rgba(110, 154, 196, 0.95);
+    border: 1px solid rgba(86, 115, 170, 0.95);
     color: #fff;
   }
 
