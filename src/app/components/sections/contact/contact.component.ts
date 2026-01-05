@@ -4,6 +4,7 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ContactService } from '../../../shared/services/contact.service';
 import { CommonModule } from '@angular/common';
 import { ToastService } from '../../../shared/services/toast.service';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact',
@@ -14,6 +15,10 @@ import { ToastService } from '../../../shared/services/toast.service';
 export class ContactComponent {
 
   sending = false;
+
+  mapUrl: SafeResourceUrl;
+  mapLabel = 'Castelar, Argentina';
+  private readonly mapEmbedUrl = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52438.89273548268!2d-58.66960677832031!3d-34.65255829999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc65a9d3ff9a5%3A0x5b9e1b3b0f3f3f3f!2sCastelar%2C%20Provincia%20de%20Buenos%20Aires%2C%20Argentina!5e0!3m2!1ses!2sar!4v1640000000000!5m2!1ses!2sar';
 
   cards: ContactCard[] = [
     {
@@ -57,13 +62,16 @@ export class ContactComponent {
   constructor(
     private fb: FormBuilder,
     private contactService: ContactService,
-    private toastService: ToastService
+    private toastService: ToastService,
+    private sanitizer: DomSanitizer
   ) {
     this.form = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
       message: ['', [Validators.required, Validators.minLength(10)]],
     });
+
+    this.mapUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.mapEmbedUrl);
   }
 
   get f() {
