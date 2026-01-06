@@ -5,10 +5,11 @@ import { ContactService } from '../../../shared/services/contact.service';
 import { CommonModule } from '@angular/common';
 import { ToastService } from '../../../shared/services/toast.service';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { FadeInOnViewDirective } from '../../../shared/directives/fade-in-on-view.directive';
 
 @Component({
   selector: 'app-contact',
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FadeInOnViewDirective],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

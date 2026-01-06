@@ -9,7 +9,7 @@
 
     <div class="edu-list">
       @for (e of education; track e.title; let i = $index) {
-        <article class="edu-card" [class.reverse]="i % 2 === 1">
+        <article class="edu-card" [class.reverse]="i % 2 === 1" fadeInOnView>
 
           <div class="edu-content">
             <div class="edu-head">

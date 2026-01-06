@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { FadeInOnViewDirective } from '../../../shared/directives/fade-in-on-view.directive';
 import { Experience } from '../../../shared/models/experience.model';
 
 @Component({
   selector: 'app-experience',
-  imports: [],
+  imports: [FadeInOnViewDirective],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.scss'
 })

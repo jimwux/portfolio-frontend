@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { FadeInOnViewDirective } from '../../../shared/directives/fade-in-on-view.directive';
 import { AboutHighlight, AboutLink } from '../../../shared/models/about.model';
 
 @Component({
   selector: 'app-about',
-  imports: [],
+  imports: [FadeInOnViewDirective],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })

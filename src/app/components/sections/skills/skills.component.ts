@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { FadeInOnViewDirective } from '../../../shared/directives/fade-in-on-view.directive';
 import { Skill } from '../../../shared/models/skill.model';
 
 @Component({
   selector: 'app-skills',
-  imports: [],
+  imports: [FadeInOnViewDirective],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })

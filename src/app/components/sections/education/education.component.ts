@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Education } from '../../../shared/models/education.model';
 import { NgFor } from '@angular/common';
+import { FadeInOnViewDirective } from '../../../shared/directives/fade-in-on-view.directive';
 
 @Component({
   selector: 'app-education',
-  imports: [NgFor],
+  imports: [NgFor, FadeInOnViewDirective],
   templateUrl: './education.component.html',
   styleUrl: './education.component.scss'
 })

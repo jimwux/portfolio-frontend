@@ -11,7 +11,7 @@
     <div class="skills-unified">
 
       @for (category of skillCategories; track category.title) {
-        <article class="skills-block">
+        <article class="skills-block" fadeInOnView>
           <header class="skills-block-header">
             <i [class]="category.icon"></i>
             <h3>{{ category.title }}</h3>
