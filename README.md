@@ -76,12 +76,6 @@ Luego abrir: `http://localhost:4200/`
 - **Directiva reutilizable** (`FadeInOnViewDirective`) para animaciones basadas en visibilidad.
 - **Uso de HttpClient** centralizado y configuración de `environment` para endpoints.
 
-## Mejoras futuras posibles
-- Añadir **i18n** para versión bilingüe.
-- Integrar **tests unitarios** de componentes críticos.
-- Optimizar rendimiento con lazy loading si se incorporan más rutas.
-- Incluir CMS o fuente dinámica para proyectos y experiencia.
-
 ## Autor / Contacto
 **Jimena Gómez Wusinowski**  
 GitHub: https://github.com/jimwux/  
