@@ -77,6 +77,6 @@ Luego abrir: `http://localhost:4200/`
 - **Uso de HttpClient** centralizado y configuración de `environment` para endpoints.
 
 ## Autor / Contacto
-**Jimena Gómez Wusinowski**  
+**Jimena Rocío Gomez Wusinowski**  
 GitHub: https://github.com/jimwux/  
 LinkedIn: https://www.linkedin.com/in/jimenagomezwusinowski/
