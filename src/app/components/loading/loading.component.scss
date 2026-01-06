@@ -1,0 +1,16 @@
+.loading-container {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--bg-main);
+  pointer-events: none;
+  transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+  opacity: 1;
+  visibility: visible;
+
+  &.loaded {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
