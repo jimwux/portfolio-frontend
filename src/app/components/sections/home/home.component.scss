@@ -209,7 +209,7 @@
 }
 
 .hero-photo-area:hover .hero-photo-wrap {
-  transform: scale(1.04);
+  transform: scale(1.08);
 }
 
 .hero-photo-area:hover .hero-photo {
@@ -221,15 +221,15 @@
 }
 
 .hero-photo-area:hover .dot-lg {
-  transform: translate(18px, -18px) scale(1.12);
+  transform: translate(24px, -24px) scale(1.14);
 }
 
 .hero-photo-area:hover .dot-md {
-  transform: translate(-18px, -8px) scale(1.12);
+  transform: translate(-22px, -10px) scale(1.12);
 }
 
 .hero-photo-area:hover .dot-sm {
-  transform: translate(18px, 12px) scale(1.15);
+  transform: translate(22px, 14px) scale(1.18);
   opacity: 0.95;
 }
 
@@ -248,30 +248,56 @@
 
 @media (min-width: 1200px) {
   .hero-photo-wrap {
-    width: 520px;
+    width: 480px;
   }
 
   .dot-lg {
-    width: 64px;
-    height: 64px;
-    right: -20px;
-    top: 90px;
+    width: 60px;
+    height: 60px;
+    right: -18px;
+    top: 85px;
   }
 
   .dot-md {
     width: 44px;
     height: 44px;
     left: -18px;
-    bottom: 40px;
+    bottom: 38px;
     background: rgba(217, 119, 6, 0.75);
   }
 
   .dot-sm {
-    width: 34px;
-    height: 34px;
-    right: 24px;
-    top: 200px;
+    width: 32px;
+    height: 32px;
+    right: 22px;
+    top: 190px;
     background: rgba(245, 158, 11, 0.75);
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero-photo-wrap {
+    width: 540px;
+  }
+
+  .hero-photo-area:hover .dot-lg {
+    transform: translate(24px, -24px) scale(1.15);
+  }
+  .hero-photo-area:hover .dot-md {
+    transform: translate(-22px, -10px) scale(1.14);
+  }
+  .hero-photo-area:hover .dot-sm {
+    transform: translate(22px, 14px) scale(1.20);
+  }
+
+  .dot-lg { right: -22px; top: 87px; }
+  .dot-md { left: -20px; bottom: 42px; }
+  .dot-sm { right: 24px; top: 200px; }
+}
+
+@media (min-width: 1600px) {
+  .hero-photo-wrap {
+    width: 600px;
   }
 }
 
