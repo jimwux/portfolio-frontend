@@ -1,4 +1,4 @@
-# Portfolio Frontend — Jimena Gómez Wusinowski
+# Portfolio Frontend — Jimena Gomez Wusinowski
 
 Portfolio personal construido con **Angular** para presentar experiencia, habilidades y proyectos, incluyendo un formulario de contacto conectado a un backend de envío de correos.
 
